@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos JS - Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>OBJETOS JS - CALCULADORA</h1>
+            <p>Programación II - 12 BTP Informática</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="calculator-container">
+            <div class="calculator">
+                <input type="text" class="display" id="display">
+                <div class="buttons">
+                    <button class="button green" onclick="clearDisplay()">C</button>
+                    <button class="button green" onclick="appendValue('7')">7</button>
+                    <button class="button green" onclick="appendValue('8')">8</button>
+                    <button class="button green" onclick="appendValue('9')">9</button>
+                    <button class="button green" onclick="appendValue('/')">/</button>
+                    <button class="button green" onclick="appendValue('4')">4</button>
+                    <button class="button green" onclick="appendValue('5')">5</button>
+                    <button class="button green" onclick="appendValue('6')">6</button>
+                    <button class="button green" onclick="appendValue('*')">*</button>
+                    <button class="button green" onclick="appendValue('1')">1</button>
+                    <button class="button green" onclick="appendValue('2')">2</button>
+                    <button class="button green" onclick="appendValue('3')">3</button>
+                    <button class="button green" onclick="appendValue('-')">-</button>
+                    <button class="button green" onclick="appendValue('0')">0</button>
+                    <button class="button green" onclick="appendValue('.')">.</button>
+                    <button class="button green" onclick="calculateResult()">=</button>
+                    <button class="button green large" onclick="appendValue('+')">+</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mi Sitio Web - Todos los derechos reservados</p>
+        <p>LMH - Programación II</p>
+        <p>Contacto: 2021130490lmh.edu.hn</p>
+    </footer>
+
+    <script>
+        function appendValue(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculateResult() {
+            try {
+                // Usar 'eval()' puede ser peligroso con entradas de usuario no confiables.
+                // Para una calculadora simple, es aceptable, pero para aplicaciones más robustas,
+                // se recomienda un parser de expresiones más seguro.
+                let result = eval(document.getElementById('display').value);
+                document.getElementById('display').value = result;
+            } catch (e) {
+                alert("Error en la operación");
+                clearDisplay();
+            }
+        }
+    </script>
+</body>
+</html>
