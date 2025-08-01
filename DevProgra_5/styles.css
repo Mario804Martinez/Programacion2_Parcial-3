@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('https://wallpaperset.com/w/full/6/3/7/222407.jpg'); /* REPLACE with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Default text color for the page */
+}
+
+.main-header {
+    background-color: #2F6D43; /* Dark green */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-header .logo-left img,
+.main-header .logo-right img {
+    height: 60px; /* Adjust as needed */
+    width: auto;
+}
+
+.main-header .header-content {
+    flex-grow: 1;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.main-header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.digital-clock-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    text-align: center;
+    color: #00FF00; /* Bright green for the time */
+    font-family: 'Consolas', 'Monaco', monospace; /* Monospaced font for the clock */
+    width: 250px;
+    max-width: 90%;
+}
+
+.digital-clock-header {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.digital-clock {
+    font-size: 3.5em; /* Adjust size for visual match */
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.main-footer {
+    background-color: #2F6D43; /* Dark green, same as header */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+.main-footer a {
+    color: #ADD8E6; /* Light blue for links */
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
